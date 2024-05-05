@@ -1,0 +1,5 @@
+- dragElement get its terrariumElement object from the declarations at the top of the script. Then, you set some local positions at 0 for the object passed into the function. These are the local variables that will be manipulated for each element as you add drag and drop functionality within the closure to each element. The terrarium will be populated by these dragged elements, so the application needs to keep track of where they are placed.
+
+- In addition, the terrariumElement that is passed to this function is assigned a pointerdown event, which is part of the web APIs designed to help with DOM management. onpointerdown fires when a button is pushed, or in our case, a draggable element is touched. This event handler works on both web and mobile browsers, with a few exceptions.
+
+- ✅ The event handler onclick has much more support cross-browser; why wouldn't you use it here? Think about the exact type of screen interaction you're trying to create here.
